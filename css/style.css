@@ -1,0 +1,253 @@
+/**********************************************************************
+Custom Style Sheet
+Create By Hitvardhan Singh Solanki
+**********************************************************************/
+
+/**********************************************************************
+Importing Google fonts
+Font Family : Titillium
+**********************************************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700');
+
+
+/**********************************************************************
+	reset the generic css
+**********************************************************************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**********************************************************************
+	Custom Css
+**********************************************************************/
+html {
+	overflow-y: scroll;
+}
+
+body {
+  background: #c1bdba !important;
+  font-family: 'Titillium Web', sans-serif !important;
+}
+
+a {
+  text-decoration:none;
+  color:#1ab188;
+  transition:.5s ease;
+}
+
+.form {
+  background:#13232f;
+  padding: 40px;
+  max-width:600px;
+  margin:40px auto;
+	margin-top: 8%;
+  border-radius:5px;
+  box-shadow:0 4px 10px 4px #13232f;
+}
+
+.tab-group {
+  list-style:none;
+  padding:0;
+  margin:0 0 40px 0;
+}
+
+.tab-group::after{
+	content: "";
+    display: table;
+    clear: both;
+}
+
+.tab-group li a {
+	display:block;
+	text-decoration:none;
+	padding:15px;
+	background:rgba(66,83,90,0.5);
+	color:rgba(123,137,148,0.8);
+	font-size:20px;
+	float:left;
+	width:50%;
+	text-align:center;
+	cursor:pointer;
+	transition:.5s ease;
+}
+
+.tab-group li a:hover{
+		background-color:#1ab188;
+		color:#fff;
+	}
+
+.active a {
+    background:#1ab188 !important;
+    color:#fff !important;
+  }
+
+h1 {
+  text-align:center;
+  color:#fff !important;
+  font-weight: 300 !important;
+  margin:0 0 40px;
+}
+
+label {
+  position:absolute;
+  transform:translateY(6px);
+  left:13px;
+  color:rgba(255,255,255,.5);
+  transition:all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size:22px;
+}
+
+label.req {
+	margin:2px;
+	color: #1ab188;
+}
+
+label.active {
+  transform:translateY(50px);
+  left:2px;
+  font-size:14px;
+}
+
+label.highlight {
+	color:#fff;
+}
+
+input,
+textarea {
+  font-size:22px;
+  display:block;
+  width:100%;
+  height:100%;
+  padding:5px 10px;
+  background:none;
+  background-image:none;
+  border:1px solid #a0b3b0 !important;
+  color:#fff !important;
+  border-radius:0 !important;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+input:focus,
+textarea:focus {
+	outline:0;
+	border-color:#1ab188 !important;
+}
+
+textarea {
+  border:2px solid #a0b3b0;
+  resize: vertical;
+}
+
+.top-row{
+	margin-right: 0px !important;
+  margin-left: 0px !important;
+	margin-bottom:10px !important;
+}
+
+.top-row .top-row-element{
+	width: 48% !important;
+	padding: 0px !important;
+}
+
+.field-wrap {
+  position:relative;
+  margin-bottom:40px;
+	margin-top: 30px;
+}
+.first-elememnt{
+	margin-right: 4% !important;
+}
+.button {
+  border:0;
+  outline:none;
+  border-radius:0;
+  padding:15px 0;
+  font-size:2rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  background:#1ab188;
+  color:#fff;
+  transition:all.5s ease;
+  -webkit-appearance: none;
+}
+
+.button:hover,
+.button:active{
+	background:#095a44 !important;
+}
+
+.button-block {
+  display:block;
+  width:100%;
+}
+
+.forgot {
+  margin-top:-20px;
+  text-align:right;
+}
+
+.forgot a{
+	background-color: transparent !important;
+}
+
+/**********************************************************************
+	Media Query
+**********************************************************************/
+
+@media (max-width:420px){
+	.form {
+		width: calc(100% - 20px);
+    padding: 20px;
+	}
+}
+
+@media (max-width:760px) {
+	.top-row .top-row-element{
+		width: 100% !important;
+	}
+}
